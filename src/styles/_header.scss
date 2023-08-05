@@ -1,0 +1,48 @@
+@use 'variables';
+@use 'fonts';
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 22px 7vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: variables.$backgroundColor;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6685049019607843) 62%, rgba(0,0,0,0) 100%);
+
+    &__logo {
+
+        svg {
+            height: 28px;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+
+        .button {
+
+            @media (max-width: 670px) {
+                display: none;
+            }
+        }
+
+        &__items {
+            list-style: none;
+            display: flex;
+            
+            &__item{
+                margin-right: 56px;
+                border-bottom: 2px solid transparent;
+
+                &--active {
+                    border-bottom: 2px solid variables.$textColor;
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,182 @@
+@use 'variables';
+
+.watch-series {
+    display: block;
+    width: 100%;
+
+    &__hero {
+        max-width: 100%;
+        width: 37%;
+
+        @media (max-width: 1000px) {
+            width: 100%;
+        }
+        h1 {
+            color: variables.$textColor;
+            font-size: 72px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 98px;
+            text-transform: uppercase;
+        }
+        
+        h2 {
+            color: variables.$textColor;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 40px;
+        }
+
+        .category {
+            margin: 30px 0;
+
+            span {
+                font-size: 14px;
+                line-height: 18px;
+
+                &:first-child {
+                    margin-right: 32px;
+                }
+            }
+        }
+
+        p {
+                color: variables.$textColor;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 28px;
+
+                a {
+                    color: variables.$textColor;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 26px;
+                    text-decoration-line: underline;
+                }
+        }
+
+        .description {
+            color: variables.$textColor;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 26px;
+            margin-top: 16px;
+            margin-bottom: 46px;
+        }
+
+        .button {
+            padding: 12px 67px;
+            color: variables.$backgroundColor;
+            text-align: center;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 32px;
+        }
+    }
+
+    &__movies {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 3vw;
+        margin-top: 5vh;
+
+        @media (max-width: 1405px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (max-width: 930px) {
+            grid-template-columns: 1fr;
+        }
+
+        &__movie {
+            display: flex;
+            max-width: 100%;
+            width: 100%;
+
+            @media (max-width: 450px) {
+                display: block;
+            }
+
+            img {
+                height: 200px;
+                border-radius: 8px;
+
+                @media (max-width: 450px) {
+                    display: flex;
+                    margin: 0 auto;
+                }
+            }
+
+            &__content {
+                margin: 16px;
+
+                h3 {
+                    color: variables.$textColor;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 700;
+                    margin: 6px 0;
+                }
+
+                h4 {
+                    color: variables.$textColor;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 20px;
+
+                    span {
+                        color: variables.$buttonColor;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 20px;
+                    }
+                }
+
+                p {
+                    color: variables.$descColor;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 16px;
+                    margin: 6px 0 12px;
+                }
+
+                .buttons_content {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 10px;
+
+                    .button--details {
+                        border: 1px solid variables.$descColor;
+                        background-color: variables.$backgroundColor;
+                    }
+
+                    .button-link--details {
+                        color: variables.$descColor;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.category-style {
+                color: variables.$descColor;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 16px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+}
